@@ -65,4 +65,11 @@ Tiedostorakenne:
 Ympäristöparametrien käyttäminen edellyttää komentoikkunan uudelleenkäynnistämistä.
     os.environ.get('EMAIL_USER')
 
+Github:
+    git init
+    git add .
+    git commit -m "first commit"
+    git remote add flaskblog https://github.com/heikkimat/flaskblog_proj.git
+    git push -u flaskblog master
+
 
