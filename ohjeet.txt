@@ -1,0 +1,68 @@
+youtube video:
+Python Flask Tutorial: Full-Featured Web App Part 1 -
+https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
+
+
+virtuaaliympäristön luonti:
+    C:\Users\heseg\OneDrive\Documents\html\flask_pr>virtualenv fl1_env
+aktivointi:
+    C:\Users\heseg\OneDrive\Documents\html\flask_pr>fl1_env\Scripts>activate
+deaktivointi:
+    deactivate
+
+Flask-kirjaston asennus:
+    (fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr>pip install flask
+
+Serverin käynnistys:
+    (fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr\flaskblog>set FLASK_APP=flaskblog.py
+    (fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr\flaskblog>set FLASK_DEBUG=1
+    (fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr\flaskblog>flask run
+    tai
+    (fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr\flaskblog>python flaskblog.py
+    myöhemmin
+    (fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr\flaskblog>python run.py
+
+Tietokannan luonti:
+    (fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr>python
+    >>> from flaskblog import db
+    >>> db.create_all()
+
+Käyttäjän lisääminen + kyselyt komentoriviltä:
+    >>> from flaskblog import User, Post
+    >>> user_1 = User(username="Heikki", email="h@blog.com", password="password")
+    >>> db.session.add(user_1)
+    >>> user_2 = User(username="John", email="j@blog.com", password="password")
+    >>> db.session.add(user_2)
+    >>> db.session.commit()
+    >>> User.query.all()
+    [User('Heikki', 'h@blog.com', 'default.jpeg'), User('John', 'j@blog.com', 'default.jpeg')]
+    >>> User.query.first()
+    User('Heikki', 'h@blog.com', 'default.jpeg')
+    >>> User.query.filter_by(username="Heikki").all()
+    [User('Heikki', 'h@blog.com', 'default.jpeg')]
+    >>>
+
+Tietokannan poisto ja uudelleen luonti:
+    >>> db.drop_all()
+    >>> db.create_all()
+    >>> User.query.all()
+    []
+    >>> Post.query.all()
+    []
+    >>>
+
+Paketoinnin jälkeen tietokannan luonti:
+    >>> from flaskblog import db
+    >>> from flaskblog.models import User, Post
+    >>> db.create_all()
+    >>> User.query.all()
+    []
+    >>>
+
+Tiedostorakenne:
+    (fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr\flaskblog>tree /F
+
+Ympäristöparametrien käyttäminen edellyttää komentoikkunan uudelleenkäynnistämistä.
+    os.environ.get('EMAIL_USER')
+
+
