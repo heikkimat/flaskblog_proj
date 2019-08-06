@@ -72,4 +72,82 @@ Github:
     git remote add flaskblog https://github.com/heikkimat/flaskblog_proj.git
     git push -u flaskblog master
 
+Blueprints - Applications and packages (and functionality)
+    esim.
+    Application: flaskblog -> Package: __init__.py
+    Application: users -> Package: __init__.py
 
+
+==================================
+git bash:
+   45  cd C:/Users/heseg/OneDrive/Documents/html/flask_pr/flaskblog
+   46  git init
+   47  ls
+   48  cd ..
+   49  ls
+   50  cd flaskblog/
+   51  touch .gitignore
+   52  ls -a
+   53  cat activate
+   54  git login
+   55  git --help
+   56  git add .
+   57  git commit -m "part10"
+   58  git push flaskblog master
+   59  git status
+   60  git remote
+   61  git remote origin https://github.com/heikkimat/flaskblog.git
+   62  git remote master https://github.com/heikkimat/flaskblog.git
+   63  git remote add master https://github.com/heikkimat/flaskblog.git
+   64  git push --help
+   65  git push -u master master
+   66  git remote add origin https://github.com/heikkimat/flaskblog.git
+   67  git push -u origin master
+   68  git status
+   69  git remote add origin https://github.com/heikkimat/flaskblog_proj.git
+   70  git remote add flaskblog https://github.com/heikkimat/flaskblog_proj.git
+   71  git push -u flaskblog master
+   72  git status
+   73  git add ohjeet.txt
+   74  git status
+   75  git commit -m "git-ohjeet"
+   76  git push flaskblog master
+   77  pwd
+   78  history
+
+heseg@DESKTOP-LFS273C MINGW64 ~/OneDrive/Documents/html/flask_pr/flaskblog (master)
+$
+
+=================================
+command prompt:
+(fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr\flaskblog>doskey /HISTORY
+cd C:\Users\heseg\OneDrive\Documents\html\flask_pr\flaskblog
+cd ..
+fl1_env\Scripts>activate
+cd flaskblog
+fl1_env\Scripts>activate
+dir
+cd ..
+dir
+cd fl1_env
+dir
+cd ..
+activate
+dir
+activate
+dir -l
+dir
+cd fl1_env
+dir
+cd Scripts
+dir
+activate
+cd ..
+cd flaskblog
+python run.py
+ history
+doskey /HISTORY
+
+(fl1_env) C:\Users\heseg\OneDrive\Documents\html\flask_pr\flaskblog>
+
+====================================
